@@ -14,11 +14,14 @@ a{text-decoration:none;color:inherit}
 .logo{font-weight:800;font-size:22px;letter-spacing:.5px}.accent{color:var(--accent)}
 .nav-links{display:flex;gap:20px;color:var(--muted);font-size:15px}
 .nav-links a:hover{color:var(--text)}
-.hero{padding:92px 0 40px;display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:center}
+.hero{padding:92px 0 28px;display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:center}
 .eyebrow{color:var(--accent);font-weight:600;letter-spacing:.4px;margin:0 0 12px}
 h1{font-size:clamp(40px,6vw,66px);line-height:1.04;margin:0 0 16px}
 .muted{color:var(--muted)}
 .lead{max-width:67ch;margin:0}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:26px}
+.stat{padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:rgba(17,20,34,.7)}
+.stat strong{display:block;font-size:28px;line-height:1;margin-bottom:6px}
 .pillrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
 .pill{padding:8px 13px;border:1px solid var(--line);border-radius:999px;background:#101324;color:#d8def5;font-size:14px}
 .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
@@ -28,12 +31,16 @@ h1{font-size:clamp(40px,6vw,66px);line-height:1.04;margin:0 0 16px}
 .hero-card{background:linear-gradient(160deg,var(--panel),var(--panel-soft));border:1px solid var(--line);border-radius:18px;padding:24px}
 .hero-card h3{margin:0 0 12px;font-size:20px}
 .hero-card ul{padding-left:18px;margin:0;display:grid;gap:8px;color:#d6ddfa}
+.proof-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.proof-item{padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(17,20,34,.72)}
+.proof-item strong{display:block;font-size:15px;margin-bottom:6px}
 .section{padding:42px 0}
 .section h2{font-size:31px;margin:0 0 16px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
 .card{background:rgba(17,20,34,.86);border:1px solid var(--line);border-radius:16px;padding:20px;transition:border-color .2s ease,transform .2s ease}
 .card:hover{transform:translateY(-3px);border-color:#4f5a88}
 .card p{margin:8px 0 0}
+.card .meta{display:inline-block;margin-top:14px;color:var(--accent);font-size:13px;font-weight:600}
 .exp{display:grid;gap:12px}
 .job{padding:20px;border:1px solid var(--line);border-radius:14px;background:rgba(16,19,33,.72)}
 .job h3{margin:0 0 6px;font-size:19px}
@@ -41,7 +48,7 @@ h1{font-size:clamp(40px,6vw,66px);line-height:1.04;margin:0 0 16px}
 .job .muted{display:block;margin-bottom:8px}
 .contact-box{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:22px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,#121628,#171d35)}
 .footer{padding:28px 0 34px;color:#98a1c1}
-@media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:72px}.nav-links{display:none}}
+@media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:72px}.nav-links{display:none}.stats,.proof-strip{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -60,27 +67,40 @@ h1{font-size:clamp(40px,6vw,66px);line-height:1.04;margin:0 0 16px}
 <header class="wrap hero">
   <div>
     <p class="eyebrow">Production AI Systems, MLOps, Generative AI</p>
-    <h1>Krunal <br><span class="muted">Vaghani</span></h1>
-    <p class="lead muted">7+ years building production machine learning systems across computer vision, cloud platforms, data pipelines, and modern LLM applications. Focused on shipping reliable AI that creates business value.</p>
+    <h1>I build AI products that <span class="muted">ship and scale</span>.</h1>
+    <p class="lead muted">I am Krunal Vaghani, an AI Engineer with 7+ years of experience delivering production machine learning systems, MLOps pipelines, computer vision platforms, and practical LLM applications for real business workflows.</p>
     <div class="pillrow">
       <div class="pill">Production AI Delivery</div>
       <div class="pill">MLOps Automation</div>
       <div class="pill">Generative AI Solutions</div>
     </div>
     <div class="btns">
-      <a class="btn primary" href="#contact">Let's Talk</a>
-      <a class="btn" href="#projects">View Projects</a>
+      <a class="btn primary" href="#contact">Book a Conversation</a>
+      <a class="btn" href="#projects">See Selected Work</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>7+</strong><span class="muted">years building production AI systems</span></div>
+      <div class="stat"><strong>4</strong><span class="muted">core strengths across ML, MLOps, GenAI, and CV</span></div>
+      <div class="stat"><strong>End-to-end</strong><span class="muted">from prototypes to reliable deployed services</span></div>
     </div>
   </div>
   <aside class="hero-card">
-    <h3>What I focus on</h3>
+    <h3>What you can hire me for</h3>
     <ul>
       <li>Designing robust AI microservices for real-world operations</li>
-      <li>Building repeatable MLOps workflows and monitoring systems</li>
-      <li>Delivering practical GenAI features with measurable outcomes</li>
+      <li>Building repeatable MLOps workflows, retraining, and monitoring systems</li>
+      <li>Shipping practical GenAI features that fit existing business processes</li>
     </ul>
   </aside>
 </header>
+
+<section class="wrap section">
+  <div class="proof-strip">
+    <div class="proof-item"><strong>Production-first mindset</strong><span class="muted">I focus on systems that are maintainable, observable, and useful beyond the demo stage.</span></div>
+    <div class="proof-item"><strong>Cross-functional delivery</strong><span class="muted">From model development to APIs, pipelines, deployment, and operational support.</span></div>
+    <div class="proof-item"><strong>Business-oriented AI</strong><span class="muted">I prioritize automation, speed, and workflow fit so AI creates measurable value.</span></div>
+  </div>
+</section>
 
 <section class="wrap section" id="skills">
   <h2>Technical Stack</h2>
@@ -102,21 +122,21 @@ h1{font-size:clamp(40px,6vw,66px);line-height:1.04;margin:0 0 16px}
 </section>
 
 <section class="wrap section" id="projects">
-  <h2>Selected Projects</h2>
+  <h2>Selected Wins</h2>
   <div class="grid">
-    <div class="card"><b>Multi-Agent Assistant</b><p class="muted">Internal AI assistant using tools, memory, and workflow orchestration.</p></div>
-    <div class="card"><b>Document Extraction Pipeline</b><p class="muted">LLM-based extraction from energy bills and certificates.</p></div>
-    <div class="card"><b>Kafka Health Monitoring</b><p class="muted">Operational monitoring for data pipelines and services.</p></div>
-    <div class="card"><b>Vision Detection API</b><p class="muted">YOLO-powered inference service with FastAPI.</p></div>
+    <div class="card"><b>Multi-Agent Assistant</b><p class="muted">Built an internal AI assistant with tools, memory, and workflow orchestration to support faster task execution and knowledge access.</p><span class="meta">Agents, orchestration, internal productivity</span></div>
+    <div class="card"><b>Document Extraction Pipeline</b><p class="muted">Delivered an LLM-based extraction pipeline for energy bills and certificates to reduce manual processing and improve turnaround time.</p><span class="meta">LLMs, document AI, automation</span></div>
+    <div class="card"><b>Kafka Health Monitoring</b><p class="muted">Created operational monitoring for pipeline reliability, helping teams detect issues earlier and maintain smoother service delivery.</p><span class="meta">Observability, data pipelines, reliability</span></div>
+    <div class="card"><b>Vision Detection API</b><p class="muted">Built a YOLO-powered FastAPI service for production-ready computer vision inference and easier integration into downstream applications.</p><span class="meta">Computer vision, APIs, deployment</span></div>
   </div>
 </section>
 
 <section class="wrap section" id="contact">
   <h2>Contact</h2>
   <div class="contact-box">
-    <p class="muted">Open to AI engineering opportunities and collaboration</p>
+    <p class="muted">Open for discussions on production AI, MLOps, and LLM-powered products.</p>
     <div class="btns" style="margin-top:0">
-      <a class="btn primary" href="mailto:krunal.vaghani@web.de">Email</a>
+      <a class="btn primary" href="mailto:krunal.vaghani@web.de">Email Me</a>
       <a class="btn" href="https://www.linkedin.com/in/krunalvaghani" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </div>
   </div>
